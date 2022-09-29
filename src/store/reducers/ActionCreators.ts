@@ -25,6 +25,8 @@ export const fetchUsers = createAsyncThunk(
 			);
 			return response.data;
 		} catch (e) {
+			// @ts-ignore
+			// FIXME unknown error
 			return thunkAPI.rejectWithValue(e.message);
 		}
 	}
